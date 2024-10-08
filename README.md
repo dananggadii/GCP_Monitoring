@@ -1,13 +1,14 @@
 # Grafana-and-Prometheus
 
-![image](https://github.com/user-attachments/assets/de74540c-1715-422a-9d9e-9af676ce501f)
-![image](https://github.com/user-attachments/assets/025d6d13-efe9-4ca2-a8d8-14f24f8aac15)
-![image](https://github.com/user-attachments/assets/6df86f83-4101-4c11-8efc-a0d2a475c6a3)
-![image](https://github.com/user-attachments/assets/56e2ede5-0684-44ca-9ffb-2a3296b8069b)
-![image](https://github.com/user-attachments/assets/04df753c-6ff4-4dc0-b351-39590a005dea)
-![image](https://github.com/user-attachments/assets/723a5c25-0016-4c79-9f02-0bee3c56393f)
-![image](https://github.com/user-attachments/assets/c983f853-6741-4cff-aace-2f128f57719d)
-![image](https://github.com/user-attachments/assets/466c506e-2e99-4817-bab6-dfe80017d256)
-![image](https://github.com/user-attachments/assets/a902c5ae-d48f-4e9e-8c85-f9e53c8f2084)
-![image](https://github.com/user-attachments/assets/5d2c0971-0fd4-4545-a552-c9cf567b73f7)
-![image](https://github.com/user-attachments/assets/69b0b9d3-ee37-4e89-8aed-12625d851604)
+**Promotheus Target**
+![image](https://github.com/user-attachments/assets/3382928b-5e08-4081-9040-eb664d30492c)
+
+**Prometheus Metric**
+![image](https://github.com/user-attachments/assets/ae8176d7-d5da-4d95-9c21-dc9a5edec643)
+
+**Grafana Data Source**
+![image](https://github.com/user-attachments/assets/6789d01e-51f3-4a7f-896b-86944a4bfca1)
+
+**Grafana Dashboard Visualization**
+![image](https://github.com/user-attachments/assets/7fc7c949-161c-409e-88e6-c96cd5439e9b)
+![image](https://github.com/user-attachments/assets/4c56ca9b-5275-497a-9e9d-457bfe01cf71)
