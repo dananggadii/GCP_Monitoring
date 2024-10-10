@@ -1,6 +1,6 @@
 # Grafana and Prometheus
 Prometheus isn’t just a data format; it is also considered an open source systems monitoring and alerting toolkit. That’s because Prometheus is software, not just data.
-Prometheus can scrape metric data from software and infrastructure and store it. [More Info]([https://documentation.wazuh.com/current/getting-started/index.html](https://grafana.com/docs/grafana/latest/fundamentals/intro-to-prometheus/#:~:text=Prometheus%20isn't%20just%20a,and%20infrastructure%20and%20store%20it.))
+Prometheus can scrape metric data from software and infrastructure and store it. [More Info](https://grafana.com/docs/grafana/latest/fundamentals/intro-to-prometheus/#:~:text=Prometheus%20isn't%20just%20a,and%20infrastructure%20and%20store%20it.)
 
 **Promotheus Target**
 
