@@ -344,19 +344,31 @@ sudo systemctl start grafana-server
 sudo systemctl status grafana-server
 ```
 
+![alt text](image-15.png)
+
 ### 7. Integrate Grafana and Prometheus
 
-1. Using a web browser, visit port `3000` of the monitoring server. For example, enter `http://local_ip_addr:3000`, replacing `local_ip_addr` with the actual IP address. Grafana displays the login page. Use the user name `admin` and the default password `password`. Change the password to a more secure value when prompted to do so.
+1. Using a web browser, visit port `3000` of the monitoring server. For example, enter `http://local_ip_addr:3000`, replacing `local_ip_addr` with the actual IP address. Grafana displays the login page. Use the user name `admin` and the default password `admin`. Change the password to a more secure value when prompted to do so.
+
+![alt text](image-16.png)
 
 2. After a successful password change, Grafana displays the Grafana Dashboard.
+
+![alt text](image-17.png)
 
 3. To add Prometheus as a data source, click the gear symbol, standing for Configuration, then select Data Sources.
 
 4. At the next display, click the Add data source button.
 
+![alt text](image-18.png)
+
 5. Choose Prometheus as the data source.
 
+![alt text](image-19.png)
+
 6. For a local Prometheus source, as described in this guide, set the URL to `http://localhost:9090`. Most of the other settings can remain at the default values. However, a non-default `Timeout` value can be added here.
+
+![alt text](image-20.png)
 
 7. When satisfied with the settings, select the Save & test button at the bottom of the screen.
 
@@ -382,3 +394,5 @@ sudo systemctl status grafana-server
 7. The `Node Exporter Full` dashboard takes effect immediately. It displays the performance metrics and state of the client node, including the Memory, RAM, and CPU details. Several drop-down menus at the top of the screen allow users to select the host to observe and the time period to highlight.
 
 The following example demonstrates how a client reacts when stressed by a demanding Python program. The `CPU Busy` widget indicates how the CPU is pinned near the maximum. If this occurs during normal operating conditions, it potentially indicates more CPU power is required.
+
+![alt text](image-21.png)
