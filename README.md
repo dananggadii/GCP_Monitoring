@@ -368,8 +368,6 @@ sudo systemctl status grafana-server
 
 6. For a local Prometheus source, as described in this guide, set the URL to `http://localhost:9090`. Most of the other settings can remain at the default values. However, a non-default `Timeout` value can be added here.
 
-![alt text](image-20.png)
-
 7. When satisfied with the settings, select the Save & test button at the bottom of the screen.
 
 8. If all settings are correct, Grafana confirms the Data source is working.
