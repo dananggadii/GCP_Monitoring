@@ -5,6 +5,10 @@ Prometheus can scrape metric data from software and infrastructure and store it.
 
 ### 1. Set up a GCP instance to host the prometheus server and client.
 
+![alt text](image.png)
+
+![alt text](image-7.png)
+
 ### 2. Install Prometheus
 
 1. Visit the [Prometheus downloads](https://prometheus.io/download/) and make a note of the most recent release. The most recent LTS release is clearly indicated on the site.
@@ -15,11 +19,15 @@ Prometheus can scrape metric data from software and infrastructure and store it.
 wget https://github.com/prometheus/prometheus/releases/download/v[release]/prometheus-[release].linux-amd64.tar.gz
 ```
 
+![alt text](image-2.png)
+
 3. Extract the archived Prometheus files.
 
 ```bash
 tar xvfz prometheus-*.tar.gz
 ```
+
+![alt text](image-3.png)
 
 4. **(Optional)** After the files have been extracted, delete the archive or move it to a different location for storage.
 
@@ -65,6 +73,8 @@ sudo mv consoles/ console_libraries/ /etc/prometheus/
 ```bash
 prometheus --version
 ```
+
+![alt text](image-4.png)
 
 ### 3. Configure Prometheus as a Service
 
@@ -143,9 +153,13 @@ sudo systemctl start prometheus
 sudo systemctl status prometheus
 ```
 
+![alt text](image-5.png)
+
 7. Access the Prometheus web interface and dashboard at http://local_ip_addr:9090. Replace local_ip_addr with the address of the monitoring server. Because Prometheus is using the default configuration file, it does not display much information yet.
 
 8. The default prometheus.yml file contains a directive to scrape the local host. Click Status and Targets to list all the targets. Prometheus should display the local Prometheus service as the only target.
+
+![alt text](image-6.png)
 
 ### 4. Install and Configure Node Exporter on the Client
 
@@ -160,11 +174,15 @@ sudo systemctl status prometheus
 wget https://github.com/prometheus/node_exporter/releases/download/v[release_num]/node_exporter-[release_num].linux-amd64.tar.gz
 ```
 
+![alt text](image-8.png)
+
 3. Extract the application.
 
 ```bash
 tar xvfz node_exporter-*.tar.gz
 ```
+
+![alt text](image-9.png)
 
 4. Move the executable to usr/local/bin so it is accessible throughout the system.
 
@@ -228,7 +246,13 @@ sudo systemctl start node_exporter
 sudo systemctl status node_exporter
 ```
 
+![alt text](image-10.png)
+
 11. Use a web browser to visit port `9100` on the client node, for example, `http://local_ip_addr:9100`. A page entitled `Node Exporter` is displayed along with a link reading `Metrics`. Click the `Metrics` link and confirm the statistics are being collected. For a detailed explanation of the various statistics, see the [Node Exporter Documentation](https://prometheus.io/docs/guides/node-exporter/).
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
 
 ### 5. Configure Prometheus to Monitor Client Nodes
 
@@ -254,6 +278,8 @@ The entry should resemble the following example. Replace remote_addr with the ac
     - targets: ["remote_addr:9100"]
 ```
 
+![alt text](image-13.png)
+
 3. To immediately refresh Prometheus, restart the prometheus service.
 
 ```bash
@@ -262,15 +288,21 @@ sudo systemctl restart prometheus
 
 4. Using a web browser, revisit the Prometheus web portal at port 9090 on the monitoring server. Select Status and then Targets. A second link for the remote_collector job is displayed, leading to port 9100 on the client. Click the link to review the statistics.
 
+![alt text](image-14.png)
+
 ### 6. Install and Deploy the Grafana Server
 
 1. Install some required utilities using apt.
 
+```bash
 sudo apt-get install -y apt-transport-https software-properties-common
+```
 
 2. Import the Grafana GPG key.
 
+```bash
 sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
+```
 
 3. Add the Grafana “stable releases” repository.
 
